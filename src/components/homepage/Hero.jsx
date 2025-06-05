@@ -6,8 +6,8 @@ const Hero = ({
     {
       type: 'text',
       headerText: "25th Fairy Hair",
-      primaryText: "25th Fairy Hair",
-      subtext: "Extraordinary styles for extraordinary people",
+      primaryText: "Extraordinary styles for extraordinary people",
+      subtext: "Music Video Shoot • Movie • Photo Shoot • Events • Bridal",
       link: {
         text: "Book Consultation",
         url: "#contact",
@@ -23,7 +23,7 @@ const Hero = ({
       backgroundImage: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200'
     }
   ],
-  autoPlayInterval = 15000 // 5 seconds
+  autoPlayInterval = 3000 // 5 seconds
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [galleryImages, setGalleryImages] = useState([]);
@@ -325,7 +325,7 @@ const Hero = ({
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    className="text-xl md:text-5xl text-blue-600 font-light mb-2 tracking-wide leading-relaxed"
+                    className="text-xl md:text-5xl text-white font-light mb-2 tracking-wide leading-relaxed"
                   >
                     {slide.primaryText}
                   </motion.p>
@@ -341,7 +341,7 @@ const Hero = ({
                     className="mb-10"
                   >
                     <div className="">
-                      <p className="text-lg md:text-3xl text-blue-300 leading-relaxed max-w-2xl mx-auto">
+                      <p className="text-lg md:text-3xl text-white leading-relaxed max-w-2xl mx-auto">
                         {slide.subtext}
                       </p>
                     </div>

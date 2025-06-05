@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Hero from '../../components/homepage/Hero';
 import SEO, { seoConfigs } from '../../components/common/SEO';
 import DynamicPortfolio from '../../components/homepage/DynamicPortfolio';
+import Navbar from '../../components/common/Navbar';
 
 const Homepage = () => {
 
@@ -43,6 +44,7 @@ const Homepage = () => {
   return (
     <>
       <SEO {...seoConfigs.home} />
+      <Navbar />
       
       <div className="relative">
         {/* Hero Section - normal flow */}
