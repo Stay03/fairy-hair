@@ -4,40 +4,104 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta name="theme-color" content="#f59e0b" />
+    
+    <!-- Primary Meta Tags -->
+    <title>25th Fairy Hair - Luxury Celebrity Hair Stylist in Lekki, Lagos</title>
+    <meta name="title" content="25th Fairy Hair - Luxury Celebrity Hair Stylist in Lekki, Lagos" />
+    <meta name="description" content="Premier luxury hair designer in Lekki, Lagos. Styled celebrities like BNXN, Ayra Starr, Tems, Fireboy DML. Professional training academy available. Book your appointment today." />
+    <meta name="keywords" content="celebrity hair stylist Lagos, luxury hair salon Lekki, hair designer Nigeria, celebrity hairstylist, music video hair styling, movie hair styling, hair training academy Lagos, Kehinde Are, 25th fairy hair" />
+    <meta name="author" content="25th Fairy Hair - Kehinde Are" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://25thfairyhair.com/" />
+    <meta property="og:title" content="25th Fairy Hair - Luxury Celebrity Hair Stylist in Lekki, Lagos" />
+    <meta property="og:description" content="Premier luxury hair designer in Lekki, Lagos. Styled celebrities like BNXN, Ayra Starr, Tems, Fireboy DML. Professional training academy available." />
+    <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:site_name" content="25th Fairy Hair" />
+    <meta property="og:locale" content="en_NG" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://25thfairyhair.com/" />
+    <meta property="twitter:title" content="25th Fairy Hair - Luxury Celebrity Hair Stylist in Lekki, Lagos" />
+    <meta property="twitter:description" content="Premier luxury hair designer in Lekki, Lagos. Styled celebrities like BNXN, Ayra Starr, Tems, Fireboy DML. Professional training academy available." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": "25th Fairy Hair",
+      "description": "Luxury celebrity hair designer and training academy",
+      "owner": {
+        "@type": "Person",
+        "name": "Kehinde Are"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lekki",
+        "addressRegion": "Lagos",
+        "addressCountry": "NG"
+      },
+      "url": "https://25thfairyhair.com",
+      "sameAs": [
+        "https://instagram.com/25thfairyhair",
+        "https://twitter.com/25thfairyhair"
+      ],
+      "priceRange": "$$$",
+      "serviceArea": {
+        "@type": "Place",
+        "name": "Lagos, Nigeria"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Hair Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Celebrity Hair Styling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Music Video Hair Styling"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hair Styling Training Academy"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Additional Meta Tags -->
+    <meta name="geo.region" content="NG-LA" />
+    <meta name="geo.placename" content="Lekki, Lagos" />
+    <meta name="geo.position" content="6.4474;3.4106" />
+    <meta name="ICBM" content="6.4474, 3.4106" />
+    
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
