@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Hero from '../../components/homepage/Hero';
 import SEO, { seoConfigs } from '../../components/common/SEO';
 import DynamicPortfolio from '../../components/homepage/DynamicPortfolio';
+import Services from '../../components/homepage/Services';
 import Navbar from '../../components/common/Navbar';
 
 const Homepage = () => {
@@ -66,7 +67,7 @@ const Homepage = () => {
               {/* About Header */}
               <motion.div variants={fadeInUp} className="text-center">
                 
-                <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-8"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto mb-8"></div>
                 <p className="text-xl max-w-4xl mx-auto leading-relaxed">
                   Founded by renowned hair stylist Kehinde Are, 25th Fairy Hair has become 
                   the premier destination for hair artistry in Nigeria. Specializing in 
@@ -81,6 +82,8 @@ const Homepage = () => {
           </div>
 
           <DynamicPortfolio />
+
+          <Services />
         </div>
       </div>
     </>

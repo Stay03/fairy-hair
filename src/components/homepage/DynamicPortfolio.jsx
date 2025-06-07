@@ -197,11 +197,11 @@ const DynamicPortfolio = () => {
       <div className="min-h-screen bg-gray-900 py-20 px-6 flex items-center justify-center">
         <div className="text-center">
           <motion.div
-            className="w-16 h-16 border-4 border-amber-400/30 border-t-amber-400 rounded-full mx-auto mb-6"
+            className="w-16 h-16 border-4 border-pink-400/30 border-t-pink-400 rounded-full mx-auto mb-6"
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
           />
-          <p className="text-amber-400/80 text-lg">Loading Portfolio...</p>
+          <p className="text-pink-400/80 text-lg">Loading Portfolio...</p>
         </div>
       </div>
     );
@@ -211,7 +211,7 @@ const DynamicPortfolio = () => {
     return (
       <div className="min-h-screen bg-gray-900 py-20 px-6 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-amber-400/80 text-lg">No portfolio items found</p>
+          <p className="text-pink-400/80 text-lg">No portfolio items found</p>
           <p className="text-gray-400 text-sm mt-2">Please check your portfolio directory structure</p>
         </div>
       </div>
@@ -235,7 +235,7 @@ const DynamicPortfolio = () => {
           <h2 className="text-4xl md:text-6xl font-light text-white mb-6">
               Portfolio
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto mb-8"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
             Discover our exclusive collection of celebrity styling work, featuring collaborations 
             with Nigeria's top artists and international productions.
@@ -315,12 +315,12 @@ const DynamicPortfolio = () => {
                         </div>
                         
                         {/* Card Overlay */}
-                        <div className={`absolute inset-0 bg-gradient-to-t from-amber-500/10 via-transparent to-transparent transition-opacity duration-500 ${
+                        <div className={`absolute inset-0 bg-gradient-to-t from-pink-500/10 via-transparent to-transparent transition-opacity duration-500 ${
                           activeItem === item.id ? 'opacity-100' : 'opacity-0'
                         }`} />
                         
                         {/* Shine Effect */}
-                        <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/20 to-transparent -skew-x-12 transition-transform duration-1000 ${
+                        <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-pink-400/20 to-transparent -skew-x-12 transition-transform duration-1000 ${
                           activeItem === item.id ? 'translate-x-full' : '-translate-x-full'
                         }`} />
                       </motion.div>
@@ -338,14 +338,14 @@ const DynamicPortfolio = () => {
                   >
                     <motion.h3 
                       className={`text-4xl md:text-5xl font-light mb-4 transition-colors duration-500 ${
-                        activeItem === item.id ? 'text-amber-400' : 'text-white'
+                        activeItem === item.id ? 'text-pink-400' : 'text-white'
                       }`}
                     >
                       {item.title}
                     </motion.h3>
                     
                     <motion.div 
-                      className="w-24 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mb-4 transition-opacity duration-500"
+                      className="w-24 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mb-4 transition-opacity duration-500"
                       animate={{
                         opacity: activeItem === item.id ? 1 : 0,
                         width: activeItem === item.id ? 96 : 0
@@ -365,7 +365,7 @@ const DynamicPortfolio = () => {
                           key={i}
                           className={`w-3 h-3 rounded-full transition-all duration-500 ${
                             activeItem === item.id 
-                              ? 'bg-amber-400' 
+                              ? 'bg-pink-400' 
                               : 'bg-gray-600'
                           }`}
                           animate={{
@@ -378,7 +378,7 @@ const DynamicPortfolio = () => {
                         <motion.div
                           className={`w-3 h-3 rounded-full transition-all duration-500 ${
                             activeItem === item.id 
-                              ? 'bg-amber-400' 
+                              ? 'bg-pink-400' 
                               : 'bg-gray-600'
                           }`}
                           animate={{
@@ -392,7 +392,7 @@ const DynamicPortfolio = () => {
 
                   {/* Glow Effect - Desktop */}
                   <motion.div 
-                    className="absolute left-0 top-0 w-72 h-72 rounded-2xl bg-gradient-to-r from-amber-400/20 to-orange-500/20 blur-xl -z-10"
+                    className="absolute left-0 top-0 w-72 h-72 rounded-2xl bg-gradient-to-r from-pink-400/20 to-rose-500/20 blur-xl -z-10"
                     animate={{
                       opacity: activeItem === item.id ? 0.3 : 0
                     }}
@@ -447,7 +447,7 @@ const DynamicPortfolio = () => {
                     {item.hasMore && (
                       <motion.div
                         key={`${item.id}-more-mobile`}
-                        className="absolute top-0 left-0 w-64 h-64 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 backdrop-blur-sm border border-amber-400/30 cursor-pointer hover:bg-gradient-to-br hover:from-amber-500/30 hover:to-orange-500/30 transition-colors duration-300"
+                        className="absolute top-0 left-0 w-64 h-64 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-pink-500/20 to-rose-500/20 backdrop-blur-sm border border-pink-400/30 cursor-pointer hover:bg-gradient-to-br hover:from-pink-500/30 hover:to-rose-500/30 transition-colors duration-300"
                         custom={3}
                         variants={imageVariants}
                         animate={activeItem === item.id ? "spreadMobile" : "stacked"}
@@ -459,17 +459,17 @@ const DynamicPortfolio = () => {
                         <div className="w-full h-full flex items-center justify-center">
                           <div className="text-center">
                             <div className="text-4xl mb-2">+</div>
-                            <div className="text-amber-400 font-medium text-lg">More</div>
+                            <div className="text-pink-400 font-medium text-lg">More</div>
                           </div>
                         </div>
                         
                         {/* Card Overlay */}
-                        <div className={`absolute inset-0 bg-gradient-to-t from-amber-500/10 via-transparent to-transparent transition-opacity duration-500 ${
+                        <div className={`absolute inset-0 bg-gradient-to-t from-pink-500/10 via-transparent to-transparent transition-opacity duration-500 ${
                           activeItem === item.id ? 'opacity-100' : 'opacity-0'
                         }`} />
                         
                         {/* Shine Effect */}
-                        <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-amber-400/20 to-transparent -skew-x-12 transition-transform duration-1000 ${
+                        <div className={`absolute inset-0 bg-gradient-to-r from-transparent via-pink-400/20 to-transparent -skew-x-12 transition-transform duration-1000 ${
                           activeItem === item.id ? 'translate-x-full' : '-translate-x-full'
                         }`} />
                       </motion.div>
@@ -487,14 +487,14 @@ const DynamicPortfolio = () => {
                   >
                     <motion.h3 
                       className={`text-3xl font-light mb-4 transition-colors duration-500 ${
-                        activeItem === item.id ? 'text-amber-400' : 'text-white'
+                        activeItem === item.id ? 'text-pink-400' : 'text-white'
                       }`}
                     >
                       {item.title}
                     </motion.h3>
                     
                     <motion.div 
-                      className="w-16 h-1 bg-gradient-to-r from-amber-500 to-orange-500 mx-auto mb-4"
+                      className="w-16 h-1 bg-gradient-to-r from-pink-500 to-rose-500 mx-auto mb-4"
                       animate={{
                         opacity: activeItem === item.id ? 1 : 0,
                         width: activeItem === item.id ? 64 : 0
@@ -514,7 +514,7 @@ const DynamicPortfolio = () => {
                           key={i}
                           className={`w-3 h-3 rounded-full transition-all duration-500 ${
                             activeItem === item.id 
-                              ? 'bg-amber-400' 
+                              ? 'bg-pink-400' 
                               : 'bg-gray-600'
                           }`}
                           animate={{
@@ -527,7 +527,7 @@ const DynamicPortfolio = () => {
                         <motion.div
                           className={`w-3 h-3 rounded-full transition-all duration-500 ${
                             activeItem === item.id 
-                              ? 'bg-amber-400' 
+                              ? 'bg-pink-400' 
                               : 'bg-gray-600'
                           }`}
                           animate={{
@@ -541,7 +541,7 @@ const DynamicPortfolio = () => {
 
                   {/* Glow Effect - Mobile */}
                   <motion.div 
-                    className="absolute top-8 left-1/2 transform -translate-x-1/2 w-64 h-64 rounded-2xl bg-gradient-to-r from-amber-400/20 to-orange-500/20 blur-xl -z-10"
+                    className="absolute top-8 left-1/2 transform -translate-x-1/2 w-64 h-64 rounded-2xl bg-gradient-to-r from-pink-400/20 to-rose-500/20 blur-xl -z-10"
                     animate={{
                       opacity: activeItem === item.id ? 0.3 : 0
                     }}
@@ -560,10 +560,10 @@ const DynamicPortfolio = () => {
           custom={portfolioItems.length + 1}
         >
           <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-black font-medium rounded-full hover:shadow-2xl hover:shadow-amber-500/25 transition-all duration-300"
+            className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-medium rounded-full hover:shadow-2xl hover:shadow-pink-500/25 transition-all duration-300"
             whileHover={{ 
               scale: 1.05,
-              boxShadow: "0 20px 40px rgba(245, 158, 11, 0.4)"
+              boxShadow: "0 20px 40px rgba(236, 72, 153, 0.4)"
             }}
             whileTap={{ scale: 0.95 }}
           >
@@ -574,8 +574,8 @@ const DynamicPortfolio = () => {
 
       {/* Background Effects */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-rose-500/5 rounded-full blur-3xl" />
       </div>
     </div>
   );

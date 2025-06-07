@@ -244,11 +244,11 @@ const Hero = ({
               <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
                 <div className="text-center">
                   <motion.div
-                    className="w-12 h-12 border-4 border-amber-400/30 border-t-amber-400 rounded-full mx-auto mb-4"
+                    className="w-12 h-12 border-4 border-pink-400/30 border-t-pink-400 rounded-full mx-auto mb-4"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                   />
-                  <p className="text-amber-400/80 text-sm">Loading gallery...</p>
+                  <p className="text-pink-400/80 text-sm">Loading gallery...</p>
                 </div>
               </div>
             )}
@@ -375,7 +375,7 @@ const Hero = ({
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide 
-                  ? 'bg-amber-400 scale-110' 
+                  ? 'bg-pink-400 scale-110' 
                   : 'bg-white/40 hover:bg-white/60'
               }`}
             />
@@ -386,7 +386,7 @@ const Hero = ({
       {/* Progress bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-black/20 z-20">
         <motion.div
-          className="h-full bg-gradient-to-r from-amber-400 to-orange-500"
+          className="h-full bg-gradient-to-r from-pink-400 to-rose-500"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
           transition={{ 

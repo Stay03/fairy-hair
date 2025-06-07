@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-4">
               {/* Enroll Now Button - Hidden on mobile */}
               <motion.button
-                className="hidden md:inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-montserrat font-medium hover:from-amber-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="hidden md:inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-montserrat font-medium hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => console.log('Enroll Now clicked')}
