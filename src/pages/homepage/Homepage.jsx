@@ -3,7 +3,16 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Hero from '../../components/homepage/Hero';
 import SEO, { seoConfigs } from '../../components/common/SEO';
 import DynamicPortfolio from '../../components/homepage/DynamicPortfolio';
-import Services from '../../components/homepage/Services';
+import MusicVideoSection from '../../components/homepage/MusicVideoSection';
+import MoviesSection from '../../components/homepage/MoviesSection';
+import BridalSection from '../../components/homepage/BridalSection';
+import PhotoshootSection from '../../components/homepage/PhotoshootSection';
+import CourseAboutSection from '../../components/homepage/CourseAboutSection';
+import CourseEnrollSection from '../../components/homepage/CourseEnrollSection';
+import BrandsCarousel from '../../components/homepage/BrandsCarousel';
+import ContactSection from '../../components/homepage/ContactSection';
+import ReviewsSection from '../../components/homepage/ReviewsSection';
+import Footer from '../../components/homepage/Footer';
 import Navbar from '../../components/common/Navbar';
 
 const Homepage = () => {
@@ -82,10 +91,30 @@ const Homepage = () => {
           </div>
 
           <DynamicPortfolio />
-
-          <Services />
         </div>
+
+        {/* Individual Service Sections */}
+        <MusicVideoSection />
+        <MoviesSection />
+        <BridalSection />
+        <PhotoshootSection />
+        
+        {/* Course Sections */}
+        <CourseAboutSection />
+        <CourseEnrollSection />
+        
+        {/* Brands Section */}
+        <BrandsCarousel />
+        
+        {/* Reviews Section */}
+        <ReviewsSection />
+        
+        {/* Contact Section */}
+        <ContactSection />
       </div>
+      
+      {/* Footer */}
+      <Footer />
     </>
   );
 };
