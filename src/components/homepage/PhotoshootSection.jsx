@@ -37,12 +37,6 @@ const PhotoshootSection = () => {
     "Brand Collaborations"
   ];
 
-  const stats = [
-    { number: "500+", label: "Photoshoots Completed", icon: "📷" },
-    { number: "50+", label: "Magazine Features", icon: "📰" },
-    { number: "100+", label: "Brand Campaigns", icon: "🏢" },
-    { number: "25+", label: "Fashion Shows", icon: "👗" }
-  ];
 
   return (
     <section 
@@ -158,30 +152,28 @@ const PhotoshootSection = () => {
             ))}
           </motion.div>
 
-          {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+          {/* Expertise List */}
+          <motion.div
+            className="max-w-4xl mx-auto space-y-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, delay: 1 }}
+          >
+            <h3 className="text-3xl font-luxury text-pink-400 mb-8 text-center">Our Expertise</h3>
             
-            {/* Left: Expertise List */}
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: -50 }}
-              animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              <h3 className="text-3xl font-luxury text-pink-400 mb-8">Our Expertise</h3>
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {expertise.map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center space-x-4 p-4 bg-gradient-to-r from-white/5 to-purple-500/5 backdrop-blur-sm rounded-xl border border-white/10"
+                  className="flex items-center space-x-4 p-4 bg-gradient-to-r from-white/5 to-purple-500/5 backdrop-blur-sm border border-white/10"
                   whileHover={{ 
                     backgroundColor: "rgba(168, 85, 247, 0.1)",
                     borderColor: "rgba(168, 85, 247, 0.3)",
-                    x: 15
+                    x: 10
                   }}
                   transition={{ duration: 0.3 }}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 1.2 + (index * 0.1) }}
                 >
                   <motion.div 
@@ -195,45 +187,8 @@ const PhotoshootSection = () => {
                   <span className="text-gray-300 font-elegant text-lg">{skill}</span>
                 </motion.div>
               ))}
-            </motion.div>
-
-            {/* Right: Stats Grid */}
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: 50 }}
-              animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-            >
-              <h3 className="text-3xl font-luxury text-purple-400 mb-8">By The Numbers</h3>
-              
-              <div className="grid grid-cols-2 gap-4">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    className="p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl border border-white/20 text-center"
-                    whileHover={{ 
-                      scale: 1.05,
-                      backgroundColor: "rgba(255, 255, 255, 0.15)"
-                    }}
-                    transition={{ duration: 0.3 }}
-                    initial={{ opacity: 0, scale: 0.8, rotateX: 30 }}
-                    animate={isActive ? { opacity: 1, scale: 1, rotateX: 0 } : { opacity: 0, scale: 0.8, rotateX: 30 }}
-                    transition={{ duration: 0.6, delay: 1.3 + (index * 0.15) }}
-                  >
-                    <motion.div 
-                      className="text-3xl mb-2"
-                      animate={{ rotateY: [0, 360] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: index }}
-                    >
-                      {stat.icon}
-                    </motion.div>
-                    <div className="text-2xl font-bold text-pink-400 mb-1">{stat.number}</div>
-                    <div className="text-gray-300 text-sm">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
 
           {/* Bottom CTA */}
           <motion.div 
@@ -243,7 +198,7 @@ const PhotoshootSection = () => {
             transition={{ duration: 0.8, delay: 1.8 }}
           >
             <motion.button
-              className="px-12 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 hover:from-purple-400 hover:via-pink-400 hover:to-rose-400 text-white font-elegant font-bold text-lg rounded-full transition-all duration-300"
+              className="px-12 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 hover:from-purple-400 hover:via-pink-400 hover:to-rose-400 text-white font-elegant font-bold text-lg transition-all duration-300"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.4)"

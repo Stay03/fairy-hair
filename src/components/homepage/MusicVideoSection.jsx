@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 
 const MusicVideoSection = () => {
   const sectionRef = useRef(null);
+  const videoRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const isInView = useInView(sectionRef, { threshold: 0.3 });
 
@@ -19,6 +20,15 @@ const MusicVideoSection = () => {
 
   useEffect(() => {
     setIsActive(isInView);
+    
+    // Handle video autoplay based on view state
+    if (videoRef.current) {
+      if (isInView) {
+        videoRef.current.play().catch(e => console.log('Video autoplay failed:', e));
+      } else {
+        videoRef.current.pause();
+      }
+    }
   }, [isInView]);
 
   const features = [
@@ -122,7 +132,7 @@ const MusicVideoSection = () => {
 
             {/* CTA Button */}
             <motion.button
-              className="px-8 py-4 bg-gray-900 hover:bg-pink-500 text-white font-elegant font-medium text-base rounded-none border border-gray-900 hover:border-pink-500 transition-all duration-300"
+              className="px-8 py-4 bg-gray-900 hover:bg-pink-500 text-white font-elegant font-medium text-base border border-gray-900 hover:border-pink-500 transition-all duration-300"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               initial={{ opacity: 0, y: 30 }}
@@ -146,15 +156,15 @@ const MusicVideoSection = () => {
               whileHover={{ y: -4 }}
               transition={{ duration: 0.3 }}
             >
-              {/* YouTube Embed */}
+              {/* Local Video */}
               <div className="relative aspect-video">
-                <iframe
-                  src={`https://www.youtube.com/embed/kHj1-Xt6ueA?start=30&autoplay=${isActive ? 1 : 0}&mute=1`}
+                <video
+                  ref={videoRef}
+                  src={require('../../assets/videos/blaq/blaq.mp4')}
                   title="Music Video Excellence"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
+                  className="w-full h-full object-cover"
+                  muted
+                  loop
                 />
               </div>
 

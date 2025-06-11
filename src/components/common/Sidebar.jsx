@@ -112,7 +112,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                   Menu
                 </h2>
                 <motion.button
-                  className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="p-2 hover:bg-gray-100 transition-colors"
                   onClick={onClose}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}

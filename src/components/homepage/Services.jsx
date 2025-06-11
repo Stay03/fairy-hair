@@ -199,7 +199,7 @@ const Services = () => {
 
                   {/* Call to Action */}
                   <motion.button 
-                    className="mt-6 w-full py-3 bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-elegant font-semibold rounded-lg transition-all duration-300 transform hover:shadow-lg hover:shadow-pink-500/25"
+                    className="mt-6 w-full py-3 bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-elegant font-semibold transition-all duration-300 transform hover:shadow-lg hover:shadow-pink-500/25"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -220,7 +220,7 @@ const Services = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <motion.button 
-            className="px-12 py-4 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 hover:from-pink-400 hover:via-rose-400 hover:to-purple-400 text-white font-elegant font-bold text-lg rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30"
+            className="px-12 py-4 bg-gradient-to-r from-pink-500 via-rose-500 to-purple-500 hover:from-pink-400 hover:via-rose-400 hover:to-purple-400 text-white font-elegant font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/30"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 25px 50px -12px rgba(236, 72, 153, 0.3)"

@@ -133,7 +133,7 @@ const BridalSection = () => {
             transition={{ duration: 0.8, delay: 1 }}
           >
             <motion.button
-              className="px-12 py-4 bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 hover:from-rose-400 hover:via-pink-400 hover:to-purple-400 text-white font-elegant font-bold text-lg rounded-full transition-all duration-300"
+              className="px-12 py-4 bg-gradient-to-r from-rose-500 via-pink-500 to-purple-500 hover:from-rose-400 hover:via-pink-400 hover:to-purple-400 text-white font-elegant font-bold text-lg transition-all duration-300"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(244, 63, 94, 0.4)"

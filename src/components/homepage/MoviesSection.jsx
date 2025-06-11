@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 
 const MoviesSection = () => {
   const sectionRef = useRef(null);
+  const videoRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const isInView = useInView(sectionRef, { threshold: 0.3 });
 
@@ -19,6 +20,15 @@ const MoviesSection = () => {
 
   useEffect(() => {
     setIsActive(isInView);
+    
+    // Handle video autoplay based on view state
+    if (videoRef.current) {
+      if (isInView) {
+        videoRef.current.play().catch(e => console.log('Video autoplay failed:', e));
+      } else {
+        videoRef.current.pause();
+      }
+    }
   }, [isInView]);
 
   const features = [
@@ -39,7 +49,7 @@ const MoviesSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative min-h-screen overflow-hidden bg-gradient-to-br from-black via-gray-900 to-rose-900"
+      className="relative pb-28 min-h-screen overflow-hidden bg-gradient-to-br from-black via-gray-900 to-rose-900"
     >
       {/* Animated Background Elements */}
       <motion.div 
@@ -79,7 +89,7 @@ const MoviesSection = () => {
               transition={{ duration: 0.3 }}
             >
               <video
-                autoPlay
+                ref={videoRef}
                 loop
                 muted
                 playsInline
@@ -168,7 +178,7 @@ const MoviesSection = () => {
                     borderColor: "rgba(244, 63, 94, 0.3)",
                     x: 10
                   }}
-                  transition={{ duration: 0.3 }}
+                  // transition={{ duration: 0.3 }}
                   initial={{ opacity: 0, x: -30 }}
                   animate={isActive ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
                   transition={{ duration: 0.5, delay: 0.8 + (index * 0.1) }}
@@ -188,7 +198,7 @@ const MoviesSection = () => {
 
             {/* CTA Button */}
             <motion.button
-              className="px-8 py-4 bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 hover:from-rose-400 hover:via-pink-400 hover:to-red-400 text-white font-elegant font-bold text-lg rounded-full transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-rose-500 via-pink-500 to-red-500 hover:from-rose-400 hover:via-pink-400 hover:to-red-400 text-white font-elegant font-bold text-lg transition-all duration-300"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(244, 63, 94, 0.4)"

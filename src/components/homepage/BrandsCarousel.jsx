@@ -186,7 +186,7 @@ const BrandsCarousel = () => {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <motion.button
-              className="px-12 py-4 bg-gradient-to-r from-gray-900 via-gray-800 to-black hover:from-gray-800 hover:via-gray-700 hover:to-gray-900 text-white font-elegant font-bold text-lg rounded-full transition-all duration-300"
+              className="px-12 py-4 bg-gradient-to-r from-gray-900 via-gray-800 to-black hover:from-gray-800 hover:via-gray-700 hover:to-gray-900 text-white font-elegant font-bold text-lg transition-all duration-300"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.3)"

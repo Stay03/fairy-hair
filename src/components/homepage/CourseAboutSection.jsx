@@ -223,39 +223,6 @@ const CourseAboutSection = () => {
             </motion.div>
           </div>
 
-          {/* Bottom Stats */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 50 }}
-            animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-          >
-            {[
-              { number: "500+", label: "Graduates", icon: "🎓" },
-              { number: "95%", label: "Success Rate", icon: "📈" },
-              { number: "12", label: "Week Program", icon: "📅" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-white/70 backdrop-blur-sm rounded-2xl border border-pink-200/50 shadow-lg"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ duration: 0.3 }}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.6, delay: 1.6 + (index * 0.1) }}
-              >
-                <motion.div 
-                  className="text-4xl mb-3"
-                  animate={{ rotateY: [0, 360] }}
-                  transition={{ duration: 2, repeat: Infinity, ease: "linear", delay: index }}
-                >
-                  {stat.icon}
-                </motion.div>
-                <div className="text-3xl font-bold text-rose-600 mb-2">{stat.number}</div>
-                <div className="text-gray-600 font-elegant">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </motion.div>
     </section>

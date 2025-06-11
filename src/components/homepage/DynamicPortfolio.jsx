@@ -560,7 +560,7 @@ const DynamicPortfolio = () => {
           custom={portfolioItems.length + 1}
         >
           <motion.button
-            className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-medium rounded-full hover:shadow-2xl hover:shadow-pink-500/25 transition-all duration-300"
+            className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-medium hover:shadow-2xl hover:shadow-pink-500/25 transition-all duration-300"
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 20px 40px rgba(236, 72, 153, 0.4)"

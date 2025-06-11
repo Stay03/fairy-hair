@@ -207,13 +207,13 @@ const ReviewsSection = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevReview}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-6 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform"
             >
               ←
             </button>
             <button
               onClick={nextReview}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-6 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform"
             >
               →
             </button>
@@ -224,7 +224,7 @@ const ReviewsSection = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentReview(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  className={`w-3 h-3 transition-all duration-300 ${
                     index === currentReview 
                       ? 'bg-pink-500 scale-125' 
                       : 'bg-gray-600 hover:bg-gray-400'
@@ -234,39 +234,6 @@ const ReviewsSection = () => {
             </div>
           </motion.div>
 
-          {/* Bottom Stats */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
-            initial={{ opacity: 0, y: 50 }}
-            animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            {[
-              { number: "500+", label: "Happy Clients", icon: "😊" },
-              { number: "98%", label: "Satisfaction Rate", icon: "💯" },
-              { number: "50+", label: "Celebrity Clients", icon: "⭐" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-2xl border border-white/20"
-                whileHover={{ scale: 1.05, y: -5 }}
-                transition={{ duration: 0.3 }}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={isActive ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.6, delay: 1 + (index * 0.1) }}
-              >
-                <motion.div 
-                  className="text-4xl mb-3"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 0.6, delay: 1 + (index * 0.1), repeat: Infinity, repeatDelay: 3 }}
-                >
-                  {stat.icon}
-                </motion.div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 font-elegant">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </motion.div>
     </section>

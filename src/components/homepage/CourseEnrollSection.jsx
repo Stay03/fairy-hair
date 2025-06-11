@@ -251,7 +251,7 @@ const CourseEnrollSection = () => {
 
                   <motion.button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 hover:from-purple-400 hover:via-pink-400 hover:to-rose-400 text-white font-elegant font-bold text-lg rounded-lg transition-all duration-300"
+                    className="w-full py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-rose-500 hover:from-purple-400 hover:via-pink-400 hover:to-rose-400 text-white font-elegant font-bold text-lg transition-all duration-300"
                     whileHover={{ 
                       scale: 1.02,
                       boxShadow: "0 25px 50px -12px rgba(168, 85, 247, 0.4)"
